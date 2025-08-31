@@ -1,0 +1,6 @@
+res://scenes/enemy_stationary.tscn
+res://scenes/enemy.gd
+res://scenes/player.gd
+res://scenes/main.tscn
+res://scenes/main.gd
+res://scenes/player.tscn

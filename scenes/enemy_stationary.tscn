@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://tl3744ckj8cv"]
+
+[ext_resource type="Script" uid="uid://ciq1y0m6pfs5c" path="res://scenes/enemy.gd" id="1_ep2on"]
+[ext_resource type="Texture2D" uid="uid://dr4eu6frwy7lt" path="res://sprites/enemy_stationary.png" id="1_tc7mq"]
+[ext_resource type="Texture2D" uid="uid://b5wvr4drbjllw" path="res://sprites/enemy_vertical.png" id="3_un381"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ep2on"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tc7mq")
+}],
+"loop": true,
+"name": &"stationary",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_un381")
+}],
+"loop": true,
+"name": &"vertical",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_un381"]
+radius = 9.0
+
+[node name="Enemy" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_ep2on")
+metadata/_edit_group_ = true
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ep2on")
+animation = &"stationary"
+
+[node name="EnemyHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_un381")
+
+[node name="EnemyVisible" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="DespawnTimer" type="Timer" parent="."]
+
+[node name="DirectionReverseTimer" type="Timer" parent="."]
