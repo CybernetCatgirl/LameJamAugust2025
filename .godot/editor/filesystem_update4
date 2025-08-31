@@ -10,3 +10,5 @@ res://scenes/interaction_area.gd
 res://scenes/camera.gd
 res://scenes/camera.tscn
 res://scenes/camera_limit_manager.gd
+res://scenes/hud.tscn
+res://scenes/hud.gd

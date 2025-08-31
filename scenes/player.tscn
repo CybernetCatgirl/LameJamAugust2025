@@ -85,14 +85,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_jej6c"]
 radius = 5.0
 
-[sub_resource type="Curve2D" id="Curve2D_g2els"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -576, -324, 0, 0, 0, 0, 576, -324, 0, 0, 0, 0, 576, -317, 0, 0, 0, 0, -577, -317, 0, 0, 0, 0, -576, -324)
-}
-point_count = 5
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(48, 48)
+
+[sub_resource type="Curve2D" id="Curve2D_g2els"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -48, 0, 0, 0, 0, 1152, -48, 0, 0, 0, 0, 1152, 0)
+}
+point_count = 5
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_g2els")
@@ -105,14 +105,6 @@ animation = &"down"
 [node name="PlayerHitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jej6c")
 
-[node name="PathUpper" type="Path2D" parent="."]
-position = Vector2(0, -150)
-curve = SubResource("Curve2D_g2els")
-
-[node name="PathLower" type="Path2D" parent="."]
-position = Vector2(0, 850)
-curve = SubResource("Curve2D_g2els")
-
 [node name="InteractionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
@@ -123,5 +115,20 @@ shape = SubResource("RectangleShape2D_dqkch")
 limit_left = 0
 limit_top = 0
 limit_right = 1152
+
+[node name="PathUpper" type="Path2D" parent="Camera2D"]
+curve = SubResource("Curve2D_g2els")
+
+[node name="UpperSpawnPoint" type="PathFollow2D" parent="Camera2D/PathUpper"]
+position = Vector2(1152, 0)
+rotation = 3.14159
+
+[node name="PathLower" type="Path2D" parent="Camera2D"]
+position = Vector2(0, 696)
+curve = SubResource("Curve2D_g2els")
+
+[node name="LowerSpawnPoint" type="PathFollow2D" parent="Camera2D/PathLower"]
+position = Vector2(1152, 0)
+rotation = 3.14159
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
