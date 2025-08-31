@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://tl3744ckj8cv"]
 
-[ext_resource type="Script" uid="uid://ciq1y0m6pfs5c" path="res://scenes/enemy.gd" id="1_ep2on"]
-[ext_resource type="Texture2D" uid="uid://dr4eu6frwy7lt" path="res://sprites/enemy_stationary.png" id="1_tc7mq"]
-[ext_resource type="Texture2D" uid="uid://b5wvr4drbjllw" path="res://sprites/enemy_vertical.png" id="3_un381"]
+[ext_resource type="Script" uid="uid://ciq1y0m6pfs5c" path="res://scenes/enemy.gd" id="1_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://dr4eu6frwy7lt" path="res://sprites/enemy_stationary.png" id="2_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://b5wvr4drbjllw" path="res://sprites/enemy_vertical.png" id="3_c4w8v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ep2on"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tc7mq")
+"texture": ExtResource("2_5uy6h")
 }],
 "loop": true,
 "name": &"stationary",
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_un381")
+"texture": ExtResource("3_c4w8v")
 }],
 "loop": true,
 "name": &"vertical",
@@ -29,7 +29,7 @@ radius = 9.0
 [node name="Enemy" type="RigidBody2D"]
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource("1_ep2on")
+script = ExtResource("1_4ra3w")
 metadata/_edit_group_ = true
 
 [node name="EnemySprite" type="AnimatedSprite2D" parent="."]

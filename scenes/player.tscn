@@ -102,8 +102,6 @@ animation = &"down"
 [node name="PlayerHitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jej6c")
 
-[node name="PlayerCamera" type="Camera2D" parent="."]
-
 [node name="PathUpper" type="Path2D" parent="."]
 position = Vector2(0, -150)
 curve = SubResource("Curve2D_g2els")

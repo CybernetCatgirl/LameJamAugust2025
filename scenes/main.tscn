@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdgg8jxp6dr2l"]
+[gd_scene load_steps=4 format=3 uid="uid://bdgg8jxp6dr2l"]
 
 [ext_resource type="Script" uid="uid://3iaquu2t8hp7" path="res://scenes/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ckphyjdch1ip8" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://colpemsj5ra4j" path="res://sprites/BLUE.png" id="3_sugp2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0wfyh")
+
+[node name="BLUE" type="Sprite2D" parent="."]
+position = Vector2(575, 5326.5)
+scale = Vector2(35.9375, 332.906)
+texture = ExtResource("3_sugp2")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 
@@ -21,3 +27,4 @@ wait_time = 3.0
 wait_time = 5.0
 
 [node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(576, 320)

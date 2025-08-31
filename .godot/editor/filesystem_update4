@@ -1,6 +1,8 @@
-res://scenes/enemy_stationary.tscn
-res://scenes/enemy.gd
-res://scenes/player.gd
 res://scenes/main.tscn
-res://scenes/main.gd
 res://scenes/player.tscn
+res://scenes/main.gd
+res://scenes/enemy.tscn
+res://scenes/player.gd
+res://scenes/camera_limiter.tscn
+res://scenes/camera_limiter.gd
+res://scenes/enemy.gd
