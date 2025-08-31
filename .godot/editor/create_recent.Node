@@ -1,12 +1,12 @@
-Marker2D
+Camera2D
+Node
+Node2D
 CollisionShape2D
 Area2D
+Marker2D
 Sprite2D
 Timer
 Path2D
-Camera2D
-Node2D
-Node
 VisibleOnScreenNotifier2D
 AnimatedSprite2D
 RigidBody2D

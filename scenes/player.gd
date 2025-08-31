@@ -1,6 +1,13 @@
 extends Area2D
 
+class_name Player
+
 signal isHit
+
+@onready var camera: Camera2D = $Camera2D
+@onready var lower_spawn: Path2D = $PathLower
+@onready var upper_spawn: Path2D = $PathUpper
+@onready var hitbox: CollisionShape2D = $PlayerHitbox
 
 var screen_size = 0
 var speed = 400
@@ -26,7 +33,6 @@ func _process(delta):
 	else:
 		$PlayerSprite.stop()
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size) # Let's see how this plays w/ camera later
 	if velocity.x != 0:
 		$PlayerSprite.animation = "right"
 		$PlayerSprite.flip_v = false
