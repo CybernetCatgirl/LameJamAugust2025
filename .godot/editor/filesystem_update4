@@ -1,14 +1,5 @@
-res://scenes/main.tscn
 res://scenes/player.tscn
-res://scenes/main.gd
 res://scenes/enemy.tscn
-res://scenes/player.gd
-res://scenes/camera_limiter.tscn
-res://scenes/camera_limiter.gd
-res://scenes/enemy.gd
-res://scenes/interaction_area.gd
-res://scenes/camera.gd
-res://scenes/camera.tscn
-res://scenes/camera_limit_manager.gd
+res://scenes/main.tscn
 res://scenes/hud.tscn
-res://scenes/hud.gd
+res://scenes/enemy.gd

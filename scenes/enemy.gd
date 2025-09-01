@@ -15,9 +15,9 @@ var SPEED = 350
 
 func _process(delta: float):
 	if enemy_type == EnemyType.VERT_MOVE:
-		position.y += SPEED * delta * sign
+		position.y += SPEED * delta * this_sign
 	elif enemy_type == EnemyType.HORI_MOVE:
-		position.x += SPEED * delta * sign
+		position.x += SPEED * delta * this_sign
 
 func _ready():
 	#Determine animation type by enemy_type enum.
