@@ -10,7 +10,7 @@ enum EnemyType{NO_MOVE, HORI_MOVE, VERT_MOVE}
 
 @export var enemy_type: EnemyType = EnemyType.NO_MOVE
 
-var sign = 1
+var this_sign = 1
 var SPEED = 350
 
 func _process(delta: float):
@@ -20,8 +20,6 @@ func _process(delta: float):
 		position.x += SPEED * delta * sign
 
 func _ready():
-	var mob_types = Array(sprite.sprite_frames.get_animation_names())
-	
 	#Determine animation type by enemy_type enum.
 	if enemy_type == EnemyType.VERT_MOVE:
 		sprite.animation = "vertical"
@@ -36,4 +34,4 @@ func _ready():
 
 
 func _on_direction_reverse_timer_timeout() -> void:
-	sign *= -1
+	this_sign *= -1

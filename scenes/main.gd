@@ -83,7 +83,7 @@ func _on_upper_bound_area_entered(area: Area2D) -> void:
 		oxygen_timer.stop()
 		stats.show_game_won()
 		player.hide()
-		player.hitbox.disabled = true
+		player.hitbox.set_deferred("disabled", true)
 		player.iframes.stop()
 		oxygen_timer.stop()
 		player.is_dead = true
