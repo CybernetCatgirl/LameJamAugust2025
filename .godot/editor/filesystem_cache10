@@ -1,25 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1756661289
-icon.svg::CompressedTexture2D::2076608136249613819::1750365073::1756661289::1::::<><><>0<>0<>fd67f833be2d7a8ecf38fcda657042a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://::1756699390
+icon.svg::CompressedTexture2D/CompressedTexture2D::2076608136249613819::1750365073::1756661289::1::::<><><>0<>0<>fd67f833be2d7a8ecf38fcda657042a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://fonts/::1756674057
-Super Kindly.ttf::FontFile::1378967362167614720::1756674057::1756674057::1::::<><><>0<>0<>19578d5c7c508b4a201a47f15e6120e9<>res://.godot/imported/Super Kindly.ttf-e41dbf9c7710c99882fc84d27d018016.fontdata::
-::res://music/::1756674065
-air.mp3::AudioStreamMP3::3450488313406992202::1756674065::1756674066::1::::<><><>0<>0<>7204cc680a0f69e24bfba54069fceacf<>res://.godot/imported/air.mp3-3fd1ab0aba60ae9786f67ee28d18e40c.mp3str::
-deep.mp3::AudioStreamMP3::6013042324630050409::1756674065::1756674066::1::::<><><>0<>0<>bbbe2cd603f8831cdf370c7019616d51<>res://.godot/imported/deep.mp3-6db2acb601660f60de31a262caf8a456.mp3str::
-game.mp3::AudioStreamMP3::8149669840790450122::1756674065::1756674066::1::::<><><>0<>0<>6fd749c7eb17476d76e11e7171daa0b3<>res://.godot/imported/game.mp3-19dcad235ec3c87d863538cea6ca8bff.mp3str::
-title.mp3::AudioStreamMP3::8591625894744809701::1756674065::1756674066::1::::<><><>0<>0<>82072c2d5352cce917318a5ddee031a9<>res://.godot/imported/title.mp3-485afd11da4ba807bf5b0f34859f07a5.mp3str::
-::res://scenes/::1756672895
-enemy.gd::GDScript::5369004994471231294::1756672798::0::1::::Enemy<>RigidBody2D<><>0<>0<><>::
-enemy.tscn::PackedScene::1358054973700798917::1756672511::0::1::::<><><>0<>0<><>::uid://ciq1y0m6pfs5c::::res://scenes/enemy.gd<>uid://dr4eu6frwy7lt::::res://sprites/enemy_stationary.png<>uid://b5wvr4drbjllw::::res://sprites/enemy_vertical.png
-main.gd::GDScript::1981832299216406994::1756672243::0::1::::<>Node2D<><>0<>0<><>::
-main.tscn::PackedScene::2609797223250766349::1756672511::0::1::::<><><>0<>0<><>::uid://3iaquu2t8hp7::::res://scenes/main.gd<>uid://ckphyjdch1ip8::::res://scenes/player.tscn<>uid://tl3744ckj8cv::::res://scenes/enemy.tscn<>uid://colpemsj5ra4j::::res://sprites/BLUE.png<>uid://ccl5j7hyygak4::::res://scenes/hud.tscn
-player.gd::GDScript::4430382892184045771::1756667984::0::1::::Player<>Area2D<><>0<>0<><>::
-player.tscn::PackedScene::5506163825526326783::1756672511::0::1::::<><><>0<>0<><>::uid://b4ed02lwrgidf::::res://scenes/player.gd<>uid://dndftwgmyjv7t::::res://sprites/arrow_char_sprite.png
-hud.tscn::PackedScene::4937766484568656353::1756672895::0::1::::<><><>0<>0<><>::uid://d621wcfilbpv::::res://scenes/hud.gd
-hud.gd::GDScript::276249189577785871::1756670853::0::1::::HUD<>CanvasLayer<><>0<>0<><>::
-::res://sounds/::1756559923
+Super Kindly.ttf::FontFile/FontFile::1378967362167614720::1756674057::1756674057::1::::<><><>0<>0<>19578d5c7c508b4a201a47f15e6120e9<>res://.godot/imported/Super Kindly.ttf-e41dbf9c7710c99882fc84d27d018016.fontdata::
+::res://music/::1756699390
+Only Blue.wav::AudioStreamWAV::5729799618158753961::1756699177::1756699390::1::::<><><>0<>0<>6d8eeb5755d17f1d255d59cdbfb49347<>res://.godot/imported/Only Blue.wav-66d6d1bfe586ed9ad3037760d22191fd.sample::
+::res://scenes/::1756699337
+enemy.gd::GDScript/GDScript::5369004994471231294::1756693603::0::1::::Enemy<>RigidBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene/PackedScene::1358054973700798917::1756699068::0::1::::<><><>0<>0<><>::uid://ciq1y0m6pfs5c::::res://scenes/enemy.gd<>uid://dr4eu6frwy7lt::::res://sprites/enemy_stationary.png<>uid://b5wvr4drbjllw::::res://sprites/enemy_vertical.png
+hud.gd::GDScript/GDScript::276249189577785871::1756698885::0::1::::HUD<>CanvasLayer<><>0<>0<><>::
+hud.tscn::PackedScene/PackedScene::4937766484568656353::1756699068::0::1::::<><><>0<>0<><>::uid://d621wcfilbpv::::res://scenes/hud.gd<>uid://tv8nj8jwrdi3::::res://fonts/Super Kindly.ttf
+main.gd::GDScript::1981832299216406994::1756699337::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::2609797223250766349::1756699337::0::1::::<><><>0<>0<><>::uid://3iaquu2t8hp7::::res://scenes/main.gd<>uid://ckphyjdch1ip8::::res://scenes/player.tscn<>uid://tl3744ckj8cv::::res://scenes/enemy.tscn<>uid://colpemsj5ra4j::::res://sprites/BLUE.png<>uid://ccl5j7hyygak4::::res://scenes/hud.tscn
+player.gd::GDScript/GDScript::4430382892184045771::1756698970::0::1::::Player<>Area2D<><>0<>0<><>::
+player.tscn::PackedScene::5506163825526326783::1756699194::0::1::::<><><>0<>0<><>::uid://b4ed02lwrgidf::::res://scenes/player.gd<>uid://dndftwgmyjv7t::::res://sprites/arrow_char_sprite.png
+::res://sounds/::1756699390
+BubbleA.wav::AudioStreamWAV/AudioStreamWAV::74915163505230531::1756699177::1756699178::1::::<><><>0<>0<>9f2c1066bf288d93c53264d1023f7e22<>res://.godot/imported/BubbleA.wav-c5e7789f77d2eb52b60a55f7b4689c55.sample::
+Done.wav::AudioStreamWAV/AudioStreamWAV::7130688193469988556::1756699177::1756699178::1::::<><><>0<>0<>dc0fc2eadb32cca3845420b9d351ba3b<>res://.godot/imported/Done.wav-8cc531b07ee3fcad50483c0ad939f9f5.sample::
+HitA.wav::AudioStreamWAV/AudioStreamWAV::2548025773547409896::1756699177::1756699178::1::::<><><>0<>0<>b1a37cdddd5ca59a7dcecb0f1842d193<>res://.godot/imported/HitA.wav-50d76a26c51618bddc5e248d5fa0a072.sample::
 ::res://sprites/::1756656445
 arrow_char_sprite.png::CompressedTexture2D/CompressedTexture2D::8078248832044134767::1756562449::1756562450::1::::<><><>0<>0<>f5c469268d3e9fccfcd599138dfe0dbc<>res://.godot/imported/arrow_char_sprite.png-627729564143e3435ec4c49321509526.ctex::
-BLUE.png::CompressedTexture2D::5779111890216788843::1756656444::1756656445::1::::<><><>0<>0<>f8b842116741c502dffe1eddfea6d1a0<>res://.godot/imported/BLUE.png-e6281bf96ec93ba34627ad80211f6b71.ctex::
+BLUE.png::CompressedTexture2D/CompressedTexture2D::5779111890216788843::1756656444::1756656445::1::::<><><>0<>0<>f8b842116741c502dffe1eddfea6d1a0<>res://.godot/imported/BLUE.png-e6281bf96ec93ba34627ad80211f6b71.ctex::
 enemy_stationary.png::CompressedTexture2D/CompressedTexture2D::8412619568393409801::1756577414::1756577436::1::::<><><>0<>0<>01687c6463e9a653983afa7e63718749<>res://.godot/imported/enemy_stationary.png-696bdc8fbcfb3583afd0b4dc3e8904bc.ctex::
 enemy_vertical.png::CompressedTexture2D/CompressedTexture2D::4538809247353539440::1756577414::1756577430::1::::<><><>0<>0<>35d4b482811b3fbdb719e12000094155<>res://.godot/imported/enemy_vertical.png-7cc6e88588801aebba20ff08950f7174.ctex::

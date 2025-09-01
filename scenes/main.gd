@@ -3,6 +3,10 @@ extends Node2D
 @onready var player: Player = $Player
 @onready var oxygen_timer: Timer = $OxygenTimer
 @onready var stats: HUD = $HUD
+@onready var music: AudioStreamPlayer2D = $Player/Music
+@onready var hit_fx: AudioStreamPlayer2D = $Player/HitSound
+@onready var victory: AudioStreamPlayer2D = $Player/VictoryFanfare
+@onready var bubble: AudioStreamPlayer2D = $Player/BubbleEffect
 
 @export var enemy: PackedScene
 
@@ -15,6 +19,7 @@ func _ready():
 	$HUD/MaxDepthMeter.hide()
 	player.hide()
 	player.is_dead = true
+	player.hitbox.set_deferred("disabled", true)
 
 func new_game():
 	stats.oxy.show()
@@ -23,18 +28,21 @@ func new_game():
 	stats.show_msg("Dive deep and resurface!")
 	can_surface = false
 	player.is_dead = false
+	player.hitbox.set_deferred("disabled", false)
 	player.start($StartPosition.position)
 	$StartTimer.start()
+	music.play()
 
 func game_over():
 	oxygen_timer.stop()
 	player.hide()
-	player.hitbox.disabled = true
+	player.hitbox.set_deferred("disabled", true)
 	player.iframes.stop()
 	player.is_dead = true
 	stats.show_game_over()
 	oxygen_timer.stop() # Maybe THIS will make it work
 	pass # Replace with function body.
+	music.stop()
 
 func _on_oxygen_timer_timeout() -> void:
 	reduce_oxygen(1)
@@ -52,8 +60,11 @@ func reduce_oxygen(reduction):
 	if oxygen <= 0:
 		oxygen_timer.stop()
 		game_over()
+	elif oxygen % 10 == 0:
+		bubble.play()
 
 func _on_player_is_hit() -> void:
+	hit_fx.play()
 	if oxygen >= 1:
 		reduce_oxygen(10)
 
@@ -65,7 +76,7 @@ func _start_button_selected() -> void:
 func _on_lower_goal_area_entered(area: Area2D) -> void:
 	if area == player && can_surface == false:
 		can_surface = true
-		stats.show_msg("You hit the bottom! Get to the surface!")
+		stats.show_msg("You hit the bottom! Get back to the surface!")
 
 func _on_upper_bound_area_entered(area: Area2D) -> void:
 	if area == player && can_surface == true:
@@ -76,6 +87,8 @@ func _on_upper_bound_area_entered(area: Area2D) -> void:
 		player.iframes.stop()
 		oxygen_timer.stop()
 		player.is_dead = true
+		music.stop()
+		victory.play()
 
 func _on_player_iframe_timeout() -> void:
 	player.iframes.stop()
