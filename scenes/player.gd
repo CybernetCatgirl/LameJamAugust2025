@@ -5,10 +5,6 @@ class_name Player
 signal isHit
 
 @onready var camera: Camera2D = $Camera2D
-@onready var lower_spawn: Path2D = $Camera2D/PathLower
-@onready var upper_spawn: Path2D = $Camera2D/PathUpper
-@onready var upper_spawn_point: PathFollow2D = $Camera2D/PathUpper/UpperSpawnPoint
-@onready var lower_spawn_point: PathFollow2D = $Camera2D/PathLower/LowerSpawnPoint
 @onready var hitbox: CollisionShape2D = $PlayerHitbox
 
 var screen_size = 0

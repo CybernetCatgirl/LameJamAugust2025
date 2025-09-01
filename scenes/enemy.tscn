@@ -11,6 +11,14 @@ animations = [{
 "texture": ExtResource("2_5uy6h")
 }],
 "loop": true,
+"name": &"horizontal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5uy6h")
+}],
+"loop": true,
 "name": &"stationary",
 "speed": 5.0
 }, {
@@ -24,7 +32,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_un381"]
-radius = 9.0
+radius = 13.1529
 
 [node name="Enemy" type="RigidBody2D" groups=["enemies"]]
 collision_mask = 0
@@ -34,13 +42,11 @@ metadata/_edit_group_ = true
 
 [node name="EnemySprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ep2on")
-animation = &"stationary"
+animation = &"vertical"
 
 [node name="EnemyHitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_un381")
 
-[node name="EnemyVisible" type="VisibleOnScreenNotifier2D" parent="."]
-
-[node name="DespawnTimer" type="Timer" parent="."]
-
 [node name="DirectionReverseTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DirectionReverseTimer" to="." method="_on_direction_reverse_timer_timeout"]

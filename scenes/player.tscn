@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckphyjdch1ip8"]
+[gd_scene load_steps=14 format=3 uid="uid://ckphyjdch1ip8"]
 
 [ext_resource type="Script" uid="uid://b4ed02lwrgidf" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dndftwgmyjv7t" path="res://sprites/arrow_char_sprite.png" id="2_qhqgy"]
@@ -88,12 +88,6 @@ radius = 5.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
 size = Vector2(48, 48)
 
-[sub_resource type="Curve2D" id="Curve2D_g2els"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -48, 0, 0, 0, 0, 1152, -48, 0, 0, 0, 0, 1152, 0)
-}
-point_count = 5
-
 [node name="Player" type="Area2D"]
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
@@ -115,20 +109,5 @@ shape = SubResource("RectangleShape2D_dqkch")
 limit_left = 0
 limit_top = 0
 limit_right = 1152
-
-[node name="PathUpper" type="Path2D" parent="Camera2D"]
-curve = SubResource("Curve2D_g2els")
-
-[node name="UpperSpawnPoint" type="PathFollow2D" parent="Camera2D/PathUpper"]
-position = Vector2(1152, 0)
-rotation = 3.14159
-
-[node name="PathLower" type="Path2D" parent="Camera2D"]
-position = Vector2(0, 696)
-curve = SubResource("Curve2D_g2els")
-
-[node name="LowerSpawnPoint" type="PathFollow2D" parent="Camera2D/PathLower"]
-position = Vector2(1152, 0)
-rotation = 3.14159
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]

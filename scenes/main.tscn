@@ -11,21 +11,14 @@ script = ExtResource("1_0wfyh")
 enemy = ExtResource("2_jyhfs")
 
 [node name="BLUE" type="Sprite2D" parent="."]
-visible = false
+z_index = -15
 position = Vector2(575, 5326.5)
 scale = Vector2(35.9375, 332.906)
 texture = ExtResource("3_sugp2")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 
-[node name="MobTimerUpper" type="Timer" parent="."]
-wait_time = 2.0
-
-[node name="MobTimerLower" type="Timer" parent="."]
-wait_time = 2.0
-
 [node name="OxygenTimer" type="Timer" parent="."]
-wait_time = 3.0
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 5.0
@@ -35,8 +28,23 @@ position = Vector2(576, 320)
 
 [node name="HUD" parent="." instance=ExtResource("5_tbgi4")]
 
+[node name="StationaryEnemies" type="Node" parent="."]
+
+[node name="SEnemy1" parent="StationaryEnemies" instance=ExtResource("2_jyhfs")]
+position = Vector2(210, 204)
+
+[node name="HorizontalEnemies" type="Node" parent="."]
+
+[node name="HEnemy1" parent="HorizontalEnemies" instance=ExtResource("2_jyhfs")]
+position = Vector2(298, 303)
+enemy_type = 1
+
+[node name="VerticalEnemies" type="Node" parent="."]
+
+[node name="VEnemy1" parent="VerticalEnemies" instance=ExtResource("2_jyhfs")]
+position = Vector2(122, 309)
+enemy_type = 2
+
 [connection signal="isHit" from="Player" to="." method="_on_player_is_hit"]
-[connection signal="timeout" from="MobTimerUpper" to="." method="_on_mob_timer_upper_timeout"]
-[connection signal="timeout" from="MobTimerLower" to="." method="_on_mob_timer_lower_timeout"]
 [connection signal="timeout" from="OxygenTimer" to="." method="_on_oxygen_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

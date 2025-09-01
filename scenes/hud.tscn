@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccl5j7hyygak4"]
+[gd_scene load_steps=3 format=3 uid="uid://ccl5j7hyygak4"]
 
 [ext_resource type="Script" uid="uid://d621wcfilbpv" path="res://scenes/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://tv8nj8jwrdi3" path="res://fonts/Super Kindly.ttf" id="2_oo0fn"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_ahhtf")
@@ -8,6 +9,7 @@ script = ExtResource("1_ahhtf")
 [node name="OxygenCount" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_oo0fn")
 text = "Oxygen: 100%"
 vertical_alignment = 1
 
@@ -18,6 +20,7 @@ anchor_right = 1.0
 offset_left = -145.0
 offset_bottom = 23.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_oo0fn")
 text = "Current Depth: 0m"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -30,6 +33,7 @@ offset_left = -163.0
 offset_top = 20.0
 offset_bottom = 43.0
 grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_oo0fn")
 text = "Maximum Depth: 0m"
 horizontal_alignment = 2
 vertical_alignment = 1
